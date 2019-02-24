@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="google" value="notranslate">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/bootstrap-grid.css">
+    <link rel="stylesheet" href="./css/range.css">
+    <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+    <!-- JAVASCRIPT -->
+    <script src="../../../blockly-demo.appspot.com/static/jquery-1.11.3.min.js"></script>
+    <script src="../../../blockly-demo.appspot.com/static/paper-full.min.js"></script>
+    <script src="../../../blockly-demo.appspot.com/static/interpreter.js"></script>
+    <script src="../../../blockly-demo.appspot.com/static/bootstrap.min.js"></script>
+    <!-- BLOCKLY -->
+    <script src="../../../blockly-demo.appspot.com/static/blockly_compressed.js"></script>
+    <script src="../../../blockly-demo.appspot.com/static/blocks_compressed.js"></script>
+    <script src="../../../blockly-demo.appspot.com/static/msg/js/en.js"></script>
+    <script src="../../../blockly-demo.appspot.com/static/javascript_compressed.js"></script>
+    <script src="../../../blockly-demo.appspot.com/static/python_compressed.js"></script>
+    <script src="../../../blockly-demo.appspot.com/static/php_compressed.js"></script>
+    <script src="../../../blockly-demo.appspot.com/static/lua_compressed.js"></script>
+    <script src="../../../blockly-demo.appspot.com/static/dart_compressed.js"></script>
+    <script src="acorn_interpreter.js"></script>
+    <script src="../../../developers.google.com/_static/js/prettify-bundle.js"></script>
+    <!-- APPLICATION --> 
+    <script src="../../../blockly-demo.appspot.com/static/tucaprog.js"></script>
+    <script src="../../../blockly-demo.appspot.com/static/blocos_personalizados.js"></script>
+    <style>
+      html, body {height:100%;padding-right: 10px;padding-left: 5px; overflow:hidden; background-color: #fbfbfb; }
+      .blocklyTreeRow{
+      height: 30px;
+      line-height: 30px;
+      color: #fbfbfb;
+      }
+      .blocklyTreeRow:hover{
+        color: #273238;
+      }
+      .blocklyToolboxDiv{
+      background-color: #273238;
+      }
+      .blocklyTreeLabel{
+      font-family: bangers;
+      font-size: 22px;
+      letter-spacing: 2px;
+      }
+      img {
+      max-width: 100%;
+      max-height: 100%;
+      }
+      .blocklySvg {
+      background-color: #fdfdfd !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row" style="height: 100%;">
+      <div class="col-7" id="blocklyArea" style="height: 100%;">
+        <div id="blocklyDiv" style="position: absolute;"></div>
+      </div>
+      <div class="col-5" style="height: 100%; padding-top:5px;" >
+        <!-- -->
+        <div class="row" style="padding-bottom:5px;">
+          <div class="col-6">
+            <button onClick="executarComVelocidade()" class="btn btn-success"><span class="glyphicon glyphicon-play"></span></button>
+            <button onClick="stepCode()" class="btn btn-info"><span class="glyphicon glyphicon-step-forward"></span></button>
+            <!--<button onClick="stopCode()" class="btn btn-danger"><span class="glyphicon glyphicon-stop"></span></button>-->
+            <button class="btn btn-default" onClick="apagarDesenho()"><span class="glyphicon glyphicon-erase"></span></button>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> <span class="glyphicon glyphicon-download-alt"></span> Exportar <span class="caret"></span></button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#" onclick="downloadSVG()"><span class="glyphicon glyphicon-picture"></span> Vetorizada (SVG)</a></li>
+                <li><a href="#" onclick="downloadPNG()"><span class="glyphicon glyphicon-picture"></span> Com transparência (PNG)</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-6" style="">
+            - Velocidade +
+            <input type="range" min="0.001" max="50.1" value="25.1" id="slider" step="0.01"></input>
+          </div>
+        </div>
+        <!-- -->
+        <div style="height: 100%;" >
+          <canvas id="myCanvas" style="position:absolute; height:94%; background-color: #fbfbfb; width: 100%;" resize></canvas>
+        </div>
+      </div>
+    </div>
+    <xml id="toolbox" style="display: none">
+      <category name="Desenho" colour="#e67e22">
+        <block type="riscar"></block>
+        <block type="mudarcor"></block>
+      </category>
+      <category name="Movimento" colour="#c0392b">
+        <block type="mover"></block>
+        <block type="girarantihorario"></block>
+        <block type="girarhorario"></block>
+      </category>
+      <category name="Repetição" colour="#16a085">
+        <block type="repetir"></block>
+      </category>
+      <category name="Números" colour="#47add9">
+        <block type="math_number" colour="#47add9"></block>
+      </category>
+    </xml>
+  </body>
+</html>
