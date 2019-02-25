@@ -11,7 +11,9 @@ O Tucaprog é algo bastante similar, porém usa a programação visual para faci
 <p>Se vai utilizar ou distribuir, lembre-se de mencionar os esforços do Humor com Ciência, Bate-papo: educação e de todos aqueles que permitiram a construção do Tucaprog (<b>Google</b> e <b>PaperJS</b>).
 
 <h1>Download</h1>
-<p>Você pode baixar as versões para uso offline (sem internet).</p>
+<p>Você pode baixar as versões para uso offline (sem internet). Empacotamos utilizando o <a href="https://electronjs.org/
+  ">ElectronJS</a>.</p>
+
 
 <ul>
 <li><a href="https://humorcomciencia.com/apps/Tucaprog-4.0.5-x32-portable.exe">Versão portátil para Windows 32 bits</a></li>
