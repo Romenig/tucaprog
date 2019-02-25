@@ -14,9 +14,9 @@ O Tucaprog é algo bastante similar, porém usa a programação visual para faci
 <p>Você pode baixar as versões para uso offline (sem internet).</p>
 
 <ul>
-<li><a href="https://developers.google.com/blockly/">Versão portátil para Windows 32 bits</a></li>
-<li>Versão portátil para Windows 64 bits</li>
-<li>Instalador para 32 e 64 bits</li>
+<li><a href="https://humorcomciencia.com/apps/Tucaprog-4.0.5-x32-portable.exe">Versão portátil para Windows 32 bits</a></li>
+<li><a href="https://humorcomciencia.com/apps/Tucaprog-4.0.5-x64-portable.exe">Versão portátil para Windows 64 bits</a></li>
+<li><a href="https://humorcomciencia.com/apps/Tucaprog-Setup-4.0.5-x86x64">Instalador para 32 e 64 bits</a></li>
 </ul>
 
 <p>Se quiser entender melhor sobre o projeto, visite o portal <a href="https://www.humorcomciencia.com/blog/programacao-por-que-aprender/">Humor com Ciência</a>.</p>
